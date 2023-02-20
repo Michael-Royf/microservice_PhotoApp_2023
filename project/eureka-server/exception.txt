@@ -1,0 +1,22 @@
+Eureka Does Not Start
+If Eureka does not start because of the following error: Java.lang.NoClassDefFoundError: com/sun/jersey/client/apache4/ApacheHttpClient4
+
+You can either add the following dependency:
+
+<dependency>
+  <groupId>com.sun.jersey.contribs</groupId>
+  <artifactId>jersey-apache-client4</artifactId>
+  <version>1.19.4</version>
+</dependency>
+or remove eureka-client dependency:
+
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+In this video course, we use Eureka as a server only, so you can keep the eureka-server dependency only.
+
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+</dependency>
